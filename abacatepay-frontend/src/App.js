@@ -25,7 +25,7 @@ function App() {
       console.log("brCodeBase64:", data.brCodeBase64); // <-- adiciona isso aqui
       if (data.brCodeBase64) {
         setQrCode(data.brCodeBase64);
-        alert("Pagamento gerado com sucesso!");
+        // alert("Pagamento gerado com sucesso!");
       } else {
         alert("Erro ao gerar pagamento.");
       }
