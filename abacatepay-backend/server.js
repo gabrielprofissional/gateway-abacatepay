@@ -41,7 +41,7 @@ app.post("/criar-pagamento", async (req, res) => {
       },
       {
         headers: {
-          Authorization: "Bearer abc_dev_MSsj6Q345Rkby4DUQXWKrYhb",
+          Authorization: `Bearer ${process.env.ABACATEPAY_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
@@ -49,10 +49,7 @@ app.post("/criar-pagamento", async (req, res) => {
 
     const { brCode, brCodeBase64 } = response.data.data;
 
-    return res.json({
-      brCode,
-      brCodeBase64, // já está no formato correto
-    });
+    return res.json({ brCode, brCodeBase64 });
   } catch (error) {
     console.error(
       "Erro ao criar pagamento:",
