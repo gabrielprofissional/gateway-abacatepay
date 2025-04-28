@@ -1,51 +1,65 @@
-🥑 AbacatePay - Integração Pix
-Este projeto utiliza React com Vite para o frontend e Node.js com Express para o backend, proporcionando uma aplicação moderna, rápida e de fácil manutenção, focada em pagamentos Pix.
+# 🥑 AbacatePay - Integração Pix
 
-🚀 Tecnologias Utilizadas
 
-🖥️ Frontend
+Este projeto utiliza **React** com **Vite** para o frontend e Node.js com Express para o backend, proporcionando uma aplicação moderna, rápida e de fácil manutenção, focada em pagamentos Pix.
 
-React: Biblioteca JavaScript para criação de interfaces dinâmicas.
+## 🚀 Tecnologias Utilizadas
 
-Axios: Comunicação HTTP com o backend para geração de QR Codes.
+### 🖥️ Frontend
 
-CSS: Estilização leve e adaptável para experiência do usuário.
+- **React**: Biblioteca JavaScript para criação de interfaces dinâmicas.
 
-🛠️ Backend
+- **Axios**: Comunicação HTTP com o backend para geração de QR Codes.
 
-Node.js com Express: Framework robusto para criação de APIs REST.
+- **CSS**: Estilização leve e adaptável para experiência do usuário.
 
-Axios: Consumo da API externa AbacatePay para criar pagamentos Pix.
+### 🛠️ Backend
 
-dotenv: Gerenciamento seguro de variáveis de ambiente (.env).
+- **Node.js**: com Express: Framework robusto para criação de APIs REST.
 
-mysql2/promise: Conexão e manipulação assíncrona com MySQL.
+- **Axios**: Consumo da API externa AbacatePay para criar pagamentos Pix.
 
-CORS: Liberação de comunicação entre front e back durante o desenvolvimento.
+- **Dotenv**: Gerenciamento seguro de variáveis de ambiente (.env).
 
-🗄️ Banco de Dados
+- **MySQL**: Conexão e manipulação assíncrona com MySQL.
 
-MySQL: Banco relacional utilizado para armazenar e atualizar saldo de usuários.
+- **CORS**: Liberação de comunicação entre front e back durante o desenvolvimento.
 
-📦 Como instalar e rodar o projeto
+### 🗄️ Banco de Dados
 
-🔧 Pré-requisitos Antes de começar, tenha instalado:
+- **MySQL**: Banco relacional utilizado para armazenar e atualizar saldo de usuários.
 
-Node.js (versão recomendada: 18.x)
+## 📦 Como instalar e rodar o projeto
 
-NPM ou Yarn
+### 🔧 Pré-requisitos Antes de começar, tenha instalado:
 
-MySQL rodando localmente
+- **Node.js** (versão recomendada: `18.x`)
 
-📥 Clonando o repositório
+- **NPM** ou **Yarn**
 
-bash
-Copiar
-Editar
-git clone github.com/seu-usuario/abacatepay-integration.git
-cd abacatepay-integration
-Configurando o ambiente
 
-📩 Contato Para dúvidas ou colaboração:
+### 📥 Clonando o repositório
+```sh
+git clone github.com/gabrielprofissional/gateway-abacatepay.git
+cd seu-repositorio
 
+# Para o frontend
+cd frontend
+npm install
+
+# Para o backend
+cd ../backend
+npm install
+
+# Iniciando o frontend
+cd frontend
+npm run dev
+
+# Iniciando o backend
+cd ../backend
+npm run dev
+   ```
+## 📩 Contato
+Caso tenha interesse em saber mais sobre este projeto ou colaborar, entre em contato:
 📧 Email: dev.gabrielteles@gmail.com
+
