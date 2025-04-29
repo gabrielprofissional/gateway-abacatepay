@@ -8,7 +8,6 @@ function App() {
 
   const handlePagamento = async () => {
     const valorNumerico = Number(valor);
-
     if (isNaN(valorNumerico) || valorNumerico <= 0) {
       alert("Informe um valor válido.");
       return;
@@ -22,10 +21,8 @@ function App() {
       });
 
       const data = await res.json();
-      console.log("brCodeBase64:", data.brCodeBase64); // <-- adiciona isso aqui
       if (data.brCodeBase64) {
         setQrCode(data.brCodeBase64);
-        // alert("Pagamento gerado com sucesso!");
       } else {
         alert("Erro ao gerar pagamento.");
       }
@@ -36,14 +33,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Pagamento com PIX</h1>
-      <div>
-        <label>Id do Usuário:</label>
-        <input value={userId} onChange={(e) => setUserId(e.target.value)} />
-      </div>
-      <div>
-        <label>Valor (R$):</label>
+    <div className="container">
+      <h1>Pagamento PIX</h1>
+      <div className="form">
+        <label>🧑 ID do Usuário</label>
+        <input
+          type="text"
+          value={userId}
+          onChange={(e) => setUserId(e.target.value)}
+        />
+
+        <label>💰 Valor (R$)</label>
         <input
           type="number"
           value={valor}
@@ -51,16 +51,18 @@ function App() {
           min="0.01"
           step="0.01"
         />
+
+        <button onClick={handlePagamento}>Gerar QR Code</button>
       </div>
-      <button onClick={handlePagamento}>Pagar com PIX</button>
 
       {qrCode && (
-        <div>
-          <h3>Escaneie o QR Code:</h3>
+        <div className="qr-container">
+          <h3>📲 Escaneie para pagar</h3>
           <img src={qrCode} alt="QR Code PIX" />
         </div>
       )}
     </div>
   );
 }
+
 export default App;
